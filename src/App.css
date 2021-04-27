@@ -1,38 +1,309 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*, 
+*::before, 
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
+:root {
+  --primaryLightColor: #d4e6a5;
+  --primaryColor: #476a2e;
+  --primaryDarkColor: #c02c03;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBackground: #f1f5f8;
+  --mainOverlay: rgba(35, 10, 36, 0.4);
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #afafaf;
+  --mainRed: #bd0303;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 0.25rem;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  --mainBorderRadius: 0.25rem;
+  --smallWidth: 85vw;
+  --maxWidth: 40rem;
+  --fullWidth: 1170px;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --blue-grey:#455A5C;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+html{
+  scroll-behavior: smooth;
+}
+html, body{
+  width:100%;
   min-height: 100vh;
-  display: flex;
+}
+body {
+  margin: 0;
+  display: block;
+  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',sans-serif;  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-attachment: scroll;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: #222;
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+main,
+.wrapper {
+  max-width: 700px;
+}
+main {
+  display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin:2rem auto;
+  text-align: center;
+  padding:2rem;
+}
+main > div {
+  width: 100%;
+  margin:2rem auto;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'IBM Plex Serif', serif;
+  letter-spacing: 1.6;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+  margin-top: 1rem;
+}
+h1 {
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+
+article{
+  min-width: 200px;
+  max-width: 75vw;
+  text-align: center;
+  margin: 4rem auto;
+  
+}
+section {
+  width: 1200px;
+  min-width: 300px;
+  margin: 0 auto;
+  min-height: 100vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 1200px) {
+  section {
+    max-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  h1{
+    font-size: 1.5rem;
   }
+  h2{
+    font-size: 1rem;
+  }
+}
+
+/* 
+====== 
+Buttons 
+======
+*/
+button {
+  border: none;
+  transition-duration: 0.4s;
+  margin: 0.2rem;
+  padding: 7px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  letter-spacing: 1.6px;
+  text-transform: capitalize;
+  font-size: 0.85rem;
+  font-family: "IBM Plex",sans-serif;
+}
+
+.btn-white {
+
+  background: transparent;
+  padding: 0.45rem 0.8rem;
+  outline: none;
+  -webkit-transition:transform .3s ease-in-out;
+  -moz-transition:transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+.btn-white:hover {
+  transform: scale(1.2);
+  color: var(--mainRed)
+}
+
+.btn{
+  outline: none;
+  background-color: #fff; 
+  border-radius: 0.25rem;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
+  transition: ease-out 0.5s;
+}
+.btn:hover{
+  box-shadow: inset 0 0 0 50px var(--danger);
+  color:var(--white);
+}
+.submit{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:black;
+  border:1px solid var(--danger);
+  text-shadow: 1px 1px 1px rgba(34, 34, 34, 0.411);
+  
+  /* background: var(--danger); */
+  /* color: var(--mainWhite); */
+  /* border-color: transparent; */
+}
+
+/*===========
+RESULT CLASS
+===========*/
+.results{
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  max-width:600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7rem;
+  padding: 2rem 3rem;
+}
+/*===========
+SECTION CLASS
+===========*/
+.section-title {
+  text-transform: capitalize;
+  letter-spacing: 0.4rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  margin-top: 1rem;
+  }
+
+
+/*========
+LOADER
+=========*/
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  margin: 88px auto;
+  margin-top: 20rem;
+  border-top: 16px solid var(--gray-dark);
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+/*===========
+ANIMATION 
+===========*/
+
+@-webkit-keyframes spin {
+  0% { 
+    -webkit-transform: rotate(0deg); 
+  }
+  100% { 
+    -webkit-transform: rotate(360deg); 
+  }
+}
+
+@keyframes spin {
+  0% { 
+    transform: rotate(0deg); 
+  }
+  100% { 
+    transform: rotate(360deg); 
+  }
+}
+/*===========
+WRAPPER CLASS
+===========*/
+.wrapper {
+  border-bottom: 1px solid #ccc;
+  margin:1rem auto;
+  padding: 2rem auto;
+  text-transform: capitalize;
+  letter-spacing: 1.6px;
+}
+.wrapper > p{
+  text-align:center;
+  }
+.row{
+justify-content: center;
+margin: 2rem auto;
+}
+.row, .list{
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'IBM Plex Serif', serif;
+  align-items: center;
+}
+
+/*===========
+LIST CLASS
+===========*/
+.list{
+width:100%;
+flex-direction:column;
+justify-content:center;
+}
+.list > li{
+margin:0.2rem auto;
+list-style-type: none;
+}
+.btn-wrapper{
+  margin-top: 2.5rem;
 }
