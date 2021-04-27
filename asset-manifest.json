@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/theonomiMC/quiz.git/static/css/main.a7c8dffa.chunk.css",
-    "main.js": "/theonomiMC/quiz.git/static/js/main.b1972f18.chunk.js",
-    "main.js.map": "/theonomiMC/quiz.git/static/js/main.b1972f18.chunk.js.map",
-    "runtime-main.js": "/theonomiMC/quiz.git/static/js/runtime-main.b386433c.js",
-    "runtime-main.js.map": "/theonomiMC/quiz.git/static/js/runtime-main.b386433c.js.map",
-    "static/js/2.af99550f.chunk.js": "/theonomiMC/quiz.git/static/js/2.af99550f.chunk.js",
-    "static/js/2.af99550f.chunk.js.map": "/theonomiMC/quiz.git/static/js/2.af99550f.chunk.js.map",
-    "static/js/3.edd12531.chunk.js": "/theonomiMC/quiz.git/static/js/3.edd12531.chunk.js",
-    "static/js/3.edd12531.chunk.js.map": "/theonomiMC/quiz.git/static/js/3.edd12531.chunk.js.map",
-    "index.html": "/theonomiMC/quiz.git/index.html",
-    "static/css/main.a7c8dffa.chunk.css.map": "/theonomiMC/quiz.git/static/css/main.a7c8dffa.chunk.css.map",
-    "static/js/2.af99550f.chunk.js.LICENSE.txt": "/theonomiMC/quiz.git/static/js/2.af99550f.chunk.js.LICENSE.txt"
+    "main.css": "/quiz/static/css/main.a7c8dffa.chunk.css",
+    "main.js": "/quiz/static/js/main.b1972f18.chunk.js",
+    "main.js.map": "/quiz/static/js/main.b1972f18.chunk.js.map",
+    "runtime-main.js": "/quiz/static/js/runtime-main.81bbca1a.js",
+    "runtime-main.js.map": "/quiz/static/js/runtime-main.81bbca1a.js.map",
+    "static/js/2.af99550f.chunk.js": "/quiz/static/js/2.af99550f.chunk.js",
+    "static/js/2.af99550f.chunk.js.map": "/quiz/static/js/2.af99550f.chunk.js.map",
+    "static/js/3.edd12531.chunk.js": "/quiz/static/js/3.edd12531.chunk.js",
+    "static/js/3.edd12531.chunk.js.map": "/quiz/static/js/3.edd12531.chunk.js.map",
+    "index.html": "/quiz/index.html",
+    "static/css/main.a7c8dffa.chunk.css.map": "/quiz/static/css/main.a7c8dffa.chunk.css.map",
+    "static/js/2.af99550f.chunk.js.LICENSE.txt": "/quiz/static/js/2.af99550f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.b386433c.js",
+    "static/js/runtime-main.81bbca1a.js",
     "static/js/2.af99550f.chunk.js",
     "static/css/main.a7c8dffa.chunk.css",
     "static/js/main.b1972f18.chunk.js"
